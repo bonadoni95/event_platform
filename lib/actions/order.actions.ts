@@ -8,7 +8,7 @@ import { connectToDatabase } from "../database";
 import Order from "../database/models/order.model";
 
 export const checkoutOrder = async (order: CheckoutOrderParams) => {
-    const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+    const stripe = require('stripe')('sk_test_51Oc0ddKO889jKIi7LU3nekvi33bQ5YrNIMJfcNOgT6XTPAjqDS657j4ZvP9jGWlpW5FBZ7Z1B5cwBS5NN9VzFllP00Vhke4Dly');
     // const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
     const price = order.isFree ? 0 : Number(order.price) * 100;
