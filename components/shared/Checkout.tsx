@@ -4,8 +4,7 @@ import { Button } from '../ui/button';
 import { IEvent } from '@/lib/database/models/event.model';
 import { checkoutOrder } from '@/lib/actions/order.actions';
 
-// const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
-loadStripe('pk_test_51Oc0ddKO889jKIi7f816kBWCZMk7zVR5CCUfN4XsBHWwRlfeQFelj37m3WVpSoqosjPORdjmxkc5iBwZeVNEaNy300xsMedSua');
+loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
 const Checkout = ({ event, userId }: { event: IEvent, userId: string }) => {
 

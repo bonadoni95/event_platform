@@ -15,7 +15,8 @@ export async function POST(request: Request) {
   } catch (err) {
     return NextResponse.json({ message: 'Webhook error', error: err })
   }
-
+  
+  console.log(event)
   // Get the ID and type
   const eventType = event.type
 
