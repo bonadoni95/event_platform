@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { DeleteConfirmation } from './DeleteConfirmation'
+import { formatPrice } from '@/lib/formatprice'
 
 type CardProps = {
     event: IEvent,
@@ -37,8 +38,8 @@ const Card = ({ event, hasOrderLink, hidePrice }: CardProps) => {
 
         <div className='flex min-h-[230px] flex-col gap-3 p-5 md:gap-4'>
           {!hidePrice && <div className='flex gap-2'>
-            <span className='p-semibold-14 w-min rounded-full bg-green-100 px-4 py-1 text-green-60'>
-              {event.isFree ? 'FREE' : `$${event.price}`}
+            <span className='p-semibold-14 w-min rounded-full bg-green-100 px-4 py-1 text-green-60 line-clamp-1'>
+              {event.isFree ? 'FREE' : `IDR${formatPrice(+event.price)}`}
             </span>
             <p className='p-semibold-14 w-min rounded-full bg-grey-500/10 px-4 py-1 text-grey-500 line-clamp-1'>
               {event.category.name}
