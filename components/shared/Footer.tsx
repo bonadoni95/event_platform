@@ -10,7 +10,7 @@ const Footer = () => {
           <Image src="/assets/images/logo-2.png" alt="logo" width={128} height={38} />
         </Link>
 
-        <p>2023 Evently. All Rights reserved.</p>
+        <p>2024 Event Bible. All Rights reserved.</p>
       </div>
     </footer>
   )
